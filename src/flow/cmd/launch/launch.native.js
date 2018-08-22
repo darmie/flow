@@ -182,7 +182,7 @@ internal.launch_ios = function(flow) {
 
         //open the xcode project path
     var ios_project_path = path.resolve( flow.project.root, flow.config.build.ios.project );
-    var ios_project_file = path.join( ios_project_path, flow.project.prepared.source.project.app.name + '.xcodeproj' );
+    var ios_project_file = path.join( ios_project_path, flow.project.prepared.source.project.app.name + '.ios.xcodeproj' );
 
     if(fs.existsSync(ios_project_file)) {
         cmd.exec(flow, 'open', [ios_project_file]);
